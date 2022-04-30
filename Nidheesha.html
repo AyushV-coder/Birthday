@@ -241,17 +241,8 @@ body {
   </k>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
         <script>
-
-function dg(){
-    window.close();
-
-}
-            window.onload = function(){
+window.onload = function(){
     document.getElementById("loader").style.display ="none";
-
-var hh = prompt("enter password");
-
-if(hh == "OpEn"){
   document.getElementById("text").style.animation="ki 30s linear" ; 
   document.getElementById("text2").style.animation="ki 30s linear" ; 
     document.body.addEventListener("touchmove", star);
@@ -274,21 +265,12 @@ if(hh == "OpEn"){
             window.navigator.vibrate(70);
         }
         document.getElementById("wish").style.fontWeight = Math.random() * 900 ;
-   
- 
+    }
     
     setTimeout(function(){
         document.getElementById("svg2").style.display =  "none";
-        alert("Touch and Drag around screen after waiting 3seconds and click on the birthday card")
-    },6000)
-}
-      
-
-}
-else {
-
-  dg();
-}
+        alert("Touch and Drag around screen after waiting 3seconds")
+    },1000)
 }
 
         </script>
