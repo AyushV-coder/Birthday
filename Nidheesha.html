@@ -167,7 +167,7 @@ body {
     #plate{
         width:35vw;
     }
-    svg{
+    #svg{
         width:35vw;
     }
 }
@@ -208,39 +208,44 @@ body {
         </style>
     </head>
     <body>
+      
     <div id="loader">
         <div id="load"></div>
         </div>
-        
-        <div id="whole">
-            <div id="plate">
+     
+        <div id="whole" class="kg">
+            <div id="plate" class="kg">
             
-      <svg viewBox="0 0 600 400" id="svg">
+      <svg viewBox="0 0 600 400" id="svg" class="kg">
                 
-      <path stroke="lightgreen" stroke-width="0.7vh" stroke-linecap="round" d="M0,-250 C200,300 350,100 600,-100" stroke="black" fill="transparent"/>
+      <path stroke="lightgreen" stroke-width="0.7vh" stroke-linecap="round" d="M0,-250 C200,300 350,100 600,-100" stroke="black" fill="transparent" class="kg"/>
             </svg>
-            <p id="Head">🎂HAPPY BIRTHDAY🎂</p>
-            <p id="name">NIDHEESHA</p>
-             <div id="wish">
+            <p id="Head" class="kg">🎂HAPPY BIRTHDAY🎂</p>
+            <p id="name" class="kg">NIDHEESHA</p>
+             <div id="wish" class="kg">
                  On this wonderful day, I wish you the best that life has to offer! Happy birthday! I hope you have a great day today and the year ahead is full of many blessing! Wishing you a fabulous birthday!
              </div>
-             <div id="wave1"></div>
+             <div id="wave1" class="kg"></div>
             
             </div>
-               <div id="logo" data-tilt data-tilt-max="60" data-tilt-speed="999" data-tilt-perspective="1600"></div>
+               <div id="logo" class="kg" data-tilt data-tilt-max="60" data-tilt-speed="999" data-tilt-perspective="1600"></div>
         </div>
-        <svg id="svg2" viewBox="0 0 600 400">
-            <text id="text" x="50" y="100" stroke="pink">
+        <svg id="svg2" class="kg" viewBox="0 0 600 400">
+            <text id="text" class="kg" x="50" y="100" stroke="pink">
                 HAPPY 
                 BIRTHDAY
             </text>
-            <text id="text2" x="80" y="250" stroke="#fff">
+            <text id="text2" class="kg" x="80" y="250" stroke="#fff">
                 NIDHEESHA
             </text>
             </svg>
   
         <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+        
         <script>
+   
+
+        
 window.onload = function(){
     document.getElementById("loader").style.display ="none";
   document.getElementById("text").style.animation="ki 30s linear" ; 
@@ -270,9 +275,24 @@ window.onload = function(){
     setTimeout(function(){
         document.getElementById("svg2").style.display =  "none";
         alert("Touch and Drag around screen after waiting 3seconds and click the birthday card ")
-    },6000)
+  window.close();
+  
+    },6000);
 }
 
-        </script>
+var pr = prompt('enter Password');
+if(pr == "password"){
+  alert('password correct');
+  
+}
+else if(pr != "password" || pr == "" || pr == null || pr == unknown){
+  location.href= "www.google.com";
+  alert("closing webpage");
+  window.close();
+  window.document.close();
+  window.exit();
+  alert("password incorrect");
+} 
+</script>
     </body>
 </html>
