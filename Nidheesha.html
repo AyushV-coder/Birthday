@@ -281,11 +281,11 @@ window.onload = function(){
 }
 
 var pr = prompt('enter Password');
-if(pr == "password"){
+if(pr == "password" || pr == "password "){
   alert('password correct');
   
 }
-else if(pr != "password" || pr == "" || pr == null || pr == unknown){
+else if(pr != "password" || pr != "password " || pr == "" || pr == null || pr == unknown){
   location.href= "www.google.com";
   alert("closing webpage");
   window.close();
