@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Nidhi</title>
+              <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap" rel="stylesheet">
+
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+
+*{
+    margin:0;
+    border:0;
+    box-sizing:border-box ;
+}
+body {
+    height:100vh;
+    width:100vw;
+    position:fixed;
+}
+#bdy{
+    background-image: url("https://i.ibb.co/JHpXWPC/images-5.jpg");
+    background-size:100% 110%;
+    background-repeat: no-repeat ;
+    position:absolute ;
+    height:100vh;
+    width:100vw;
+}
+#d1{
+    height:100vh;
+    width:100vw;
+    position:absolute ;
+    left:-50vw;
+    z-index:10;
+    background:url("https://i.ibb.co/frwCWpQ/IMG-20230428-202742.jpg");
+    background-size: 50% 100%;
+    background-repeat:repeat ;
+    transition:2s;
+}
+#d2{
+    height:100vh;
+    width:100vw;
+    position:absolute ;
+    right:-50vw;
+    z-index:10;
+    background:url("https://i.ibb.co/HtJyPQF/Screenshot-20230428-201530.png");
+    background-size: 50% 100%;
+    background-repeat: no-repeat ;
+    transition:2s;
+}
+.door{
+    z-index:20;
+}
+#wall{
+    height:60vh;
+    width:100vw;
+    backdrop-filter:blur(20px);
+    border-radius: 0% 0% 60% 60%;
+    overflow: ;
+}
+#we{
+    position:relative ;
+    top:7vh;
+    height:65vh;
+    width:100vw;
+    text-align:center ;
+    font-size:4vh;
+}
+#blow{
+    position:relative ;
+    top:55%;
+    left:0;
+    right:0;
+    margin:auto;
+    height:20vh;
+    width:20vh;
+    border-radius:100%;
+    background:url("https://i.ibb.co/XCNjHMb/images-3.jpg");
+    background-size: cover;
+    background-repeat: no-repeat ;
+    transition:0.5s;
+    z-index:1;
+}
+#x{
+    position:absolute ;
+    height:10vh;
+    width:10vh;
+    left:0.6vh;
+    z-index:120;
+    display:none;
+    transition:2s;
+    font-size:4vh;
+    top:0vh;
+}
+#pic{
+    position: relative ;
+    height:18vh;
+    width:18vh;
+    background:green;
+    border-radius:100%;
+    left:1vh;
+    top:1vh;
+    transition:1s;
+    background-size:80% 100%;
+}
+#wshes{
+    height: 40vh;
+    width:90vw;
+    backdrop-filter:blur(30px);
+    border-radius: 30px;
+    position:relative ;
+    left:0;
+    right:0;
+    top:20vh;
+    margin:auto;
+    transition:1s;
+    display:none;
+    overflow:hidden;
+}
+#plate{
+   position:absolute;
+    height:auto;
+    width:75vw;
+    top:40vh;
+    background:#f0bcc8;
+    text-align:center ;
+    overflow:hidden ;
+    left:0;
+    right:0;
+    margin:auto;
+    border-radius: 20px;
+    display: none;
+}
+#p{
+    position:relative ;
+    font-family: 'Bruno Ace SC', cursive;
+    font-size: 17px;
+    text-align:center ;
+}
+#hb{
+    position:relative ;
+    text-align:center ;
+    top:4vh;
+    font-family: 'Oswald', sans-serif;
+}
+#se{
+    position:relative ;
+    top:4vh;
+    text-align:center;
+    font-size:2vh;
+}
+#bottom{
+  position: relative ;
+  bottom:-23vh;
+  width: 85%;
+  height: 23%;
+  backdrop-filter: blur(10px);
+  z-index: 4;
+  left: 15%;
+  right: 0;
+  margin: auto;
+  background: linear-gradient(to right, #DC449AF2, #36D4BEBF);
+  border-radius: 90% 10% 0% 100% / 100% 100% 0% 0%;
+}
+#bottom:before{
+  content: "";
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(to left, #7328C8AB, #3961CCA8);
+  border-radius: 90% 10% 0% 100% / 100% 100% 0% 0%;
+  left:-24%;
+  position: absolute  ;
+  transform: rotateY(180deg);
+  z-index: 1;
+}
+#hhh{
+    position:absolute ;
+    top:10vh;
+    text-align:center ;
+    width:100vw;
+}
+#head{
+    font-family: 'Oswald', sans-serif;
+}
+#cke{
+    position:absolute ;
+    height:0vh;
+    width:80vw;
+    background: linear-gradient(to right, #DC449AF2, #36D4BEBF);
+    bottom:6vh;
+    left:0;
+    right:0;
+    margin:auto;
+    border-radius:70px;
+    z-index:10;
+    text-align:center ;
+    transition:1s;
+}
+#img{
+    position:absolute;
+    top:20vh;
+    display:none;
+    transition:1s;
+}
+#cc{
+    text-align:center ;
+    display: none;
+    font-size:30px;
+    font-family: 'Oswald', sans-serif;
+    transition:1s;
+}
+#name{
+    display: none;
+    position:absolute ;
+    top:28vh;
+    width:100vw;
+    text-align:center ;
+}
+#nm{
+    
+}
+
+#name2{
+    display: none;
+    position:absolute ;
+    top:28vh;
+    width:100vw;
+    text-align:center ;
+}
+#nm2{
+    
+}
+</style>
+    </head>
+    <body>
+    <div id="bdy">
+          </div>
+        <div class="door" id="d1" onclick="val()"></div>
+        <div class="door" id="d2" onclick="val()"></div>
+        <div id="wall">
+        <div id="hhh">
+        <h1 id="head">HAPPY BIRTHDAY 🎂</h1>
+        </div>
+            <div id="blow">
+            
+                <div id="pic" onclick="pen()" ></div>
+                  <div id="name"><h1 id="nm">NIDHEESHA</h1></div>
+                <div id="wshes" onclick="ws()">
+              
+                <h1 id="hb">Happy Birthday ❤️</h1>
+                <h4 id="se">To one of my most fav person</h4>
+                <div id="bottom"></div>
+                    <div id="name2"><h1 id="nm2">NIDHEESHA</h1></div>
+                <div id="plate">
+                    <p id="p">Happy Birthday! I hope you have a great day today, and the year ahead a full of many blessings. Wish you a many many happy returns of the day ❤️</p>
+                    </div>
+                </div>
+                
+            </div>
+           
+             
+        </div>
+         <div id="x" onclick="clse()">&#x2715;</div>
+          <div id="cke" onclick="nikk()" ><h1 id="cc">Let's cut cake 🎂</h1><img id="img" src="https://i.ibb.co/svCdbDb/di6ay5-By-T.gif"> </div>
+        <div id="we">❤️❤️❤️</div>
+  <script>
+      
+function nikk(){
+var cke = document.getElementById("cke");
+var gif = document.getElementById("img");
+gif.style.display = "block";
+cke.style.height = "100vh";
+cke.style.width = "100vw";
+cke.style.position = "absolute";
+cke.style.bottom = "0vh";
+cke.style.borderRadius = "0";
+
+}
+window.onload = function(){
+var wa = ["https://i.ibb.co/r2dpjzj/Screenshot-20230506-115819.png" ,"https://i.ibb.co/9cKqSVH/Screenshot-20230506-115801.png" ,"https://i.ibb.co/ZmVzgpd/Screenshot-20230506-115745.png", "https://i.ibb.co/zhCwdYN/Screenshot-20230506-115716.png" ,"https://i.ibb.co/h1CDhgC/Screenshot-20230506-115656.png" ,"https://i.ibb.co/k9Kr45Y/Screenshot-20230506-115648.png" , "https://i.ibb.co/rsFCTQf/Screenshot-20230506-115514.png"];
+var r = Math.floor(Math.random()*7);
+var pic = document.getElementById("pic");
+pic.style.background = "url(https://i.ibb.co/stCWYVc/Screenshot-20230506-192525.png)";
+pic.style.backgroundSize = "100% 100%";
+}
+function ws(){
+var wis = document.getElementById("wshes");
+var cke = document.getElementById("cke");
+cke.style.height = "0";
+var pl = document.getElementById("plate");
+pl.style.display = "block";
+var bt = document.getElementById("bottom");
+bt.style.display = "none";
+var se = document.getElementById("se");
+se.style.display = "none";
+var hb = document.getElementById("hb");
+hb.style.display = "none";
+var pic = document.getElementById("pic");
+var nm2 = document.getElementById("name2");
+   nm2.style.display = "block";
+pic.style.border = "2vh solid pink";
+wis.style.height = "100vh";
+wis.style.width = "100vw";
+wis.style.borderRadius = "0px";
+wis.style.position = "absolute";
+wis.style.top = "0";
+wis.style.background = "url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBUvlKfz-jlTxJk8N9SXydAqiTzWqcuj3yYg&usqp=CAU)";
+wis.style.backgroundSize ="100% 100%";
+}
+var jim = 0;
+function pen(){
+   var cke = document.getElementById("cke");
+   cke.style.height = "10vh";
+   var o1 = document.getElementById("d1");
+   var cl = document.getElementById("x");
+   var b1 = document.getElementById("blow");
+   var o2 = document.getElementById("d2");
+   var pic = document.getElementById("pic");
+   var wis = document.getElementById("wshes");
+   var cut = document.getElementById("cc");
+   var nm = document.getElementById("name");
+   nm.style.display = "block";
+   var pen = document.getElementById("we");
+   pen.style.display = "none";
+    cut.style.display = "block";
+   wis.style.display = "block";
+   pic.style.left = "0";
+   pic.style.right = "0";
+   pic.style.top = "10vh";
+   pic.style.margin = "auto";
+   pic.style.border = "2vh solid white";
+   pic.style.zIndex = "5"
+   o1.style.left = "-100vw";
+   o2.style.right = "-100vw";
+   b1.style.height = "100vh";
+   b1.style.width = "100vw";
+   b1.style.position = "absolute";
+   b1.style.top = "0";
+   cl.style.display = "block";
+   b1.style.borderRadius = "0px";
+   b1.style.zIndex = "5";
+}
+
+
+function clse(){
+   var b1 = document.getElementById("blow");
+   var cl = document.getElementById("x");
+   var pic = document.getElementById("pic");
+   var pl = document.getElementById("plate");
+   var wis = document.getElementById("wshes");
+   var bt = document.getElementById("bottom");
+   var cke = document.getElementById("cke");
+   var gif = document.getElementById("img");
+   var nm = document.getElementById("name");
+   nm.style.display = "none";
+   var nm2 = document.getElementById("name2");
+   nm2.style.display = "none";
+    gif.style.display = "none";
+    var cut = document.getElementById("cc");
+    cut.style.display = "none";
+   cke.style.height = "0";
+cke.style.width = "80vw";
+cke.style.bottom = "6vh";
+cke.style.borderRadius = "70px";
+bt.style.display = "block";
+var se = document.getElementById("se");
+se.style.display = "block";
+var hb = document.getElementById("hb");
+hb.style.display = "block";
+   wis.style.height ="40vh";
+wis.style.width = "80vw";
+pl.style.display = "none";
+wis.style.position = "relative";
+wis.style.top = "20vh";
+   wis.style.backdropFilter = "blur(15px)";
+   wis.style.background = "none";
+   wis.style.display = "none";
+   wis.style.borderRadius ="30px"
+   cl.style.display = "none";
+   b1.style.height = "20vh";
+   b1.style.width = "20vh";
+   pic.style.left = "0vh";
+   pic.style.top = "1vh";
+   pic.style.right = "auto";
+   pic.style.border = "none";
+   b1.style.position = "relative";
+   b1.style.top = "55%";
+   b1.style.borderRadius = "100%";
+   b1.style.zIndex = "0";
+   }
+
+var counter = 0;
+function val(){
+  if(counter ==0 ){
+   var d1 = document.getElementById("d1");
+   var d2 = document.getElementById("d2");
+   d1.style.transform = "perspective(70vh) rotateY(75deg)";
+   var audio = new Audio("https://github.com/AyushV-coder/Birthday/blob/master/birthday-card-73275.mp3?raw=true");
+    audio.play();
+   var d2 = document.getElementById("d2");
+   d2.style.transform = "perspective(70vh) rotateY(-75deg)";
+   counter = 1;
+     }
+else{
+    var d1 = document.getElementById("d1");
+   var d2 = document.getElementById("d2");
+   d1.style.transform = "rotateY(0deg)";
+   var d2 = document.getElementById("d2");
+   d2.style.transform = "rotateY(0deg)";
+   counter = 0;
+}
+}
+
+  </script>
+    </body>
+</html>
