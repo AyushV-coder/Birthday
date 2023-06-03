@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>HTML</title>
+  <style>
+    * {
+      margin: 0;
+      border: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-size: 15pt;
+      background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6_k3XhjxH4Q4ZyfOesoIl2SVM5804fttjbA&usqp=CAU);
+      font-family: 'Segoe UI', Arial, sans-serif;
+    }
+
+    #card {
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: auto;
+      height: 80vh;
+      width: 90vw;
+      background-color: none;
+      backdrop-filter: blur(20px);
+      top: 10vh;
+      border-radius: 20px;
+      box-shadow: 8px 8px 16px #d9d9d9, -8px -8px 16px #ffffff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 2rem;
+      box-sizing: border-box;
+    }
+
+    #pic {
+      height: 20vh;
+      width: 20vh;
+      border-radius: 100%;
+      background-image: url(https://i.ibb.co/WPFp0gx/Screenshot-20230603-170913.png);
+      background-size: 100% 100% ;
+      border: 2vh solid #f0f0f0;
+      box-shadow: 8px 8px 16px #d9d9d9, -8px -8px 16px #ffffff;
+      margin-bottom: 1rem;
+    }
+
+    .name {
+      text-align: center;
+      font-style: italic;
+      color: #888888;
+      font-size: 14pt;
+      letter-spacing: 2px;
+      margin-bottom: 1rem;
+    }
+
+    .message {
+      text-align: center;
+      margin-bottom: 1rem;
+      font-size: 18pt;
+      color: #555555;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+      letter-spacing: 1px;
+      line-height: 1.5;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    .sender {
+      text-align: center;
+      font-weight: bold;
+      color: #555555;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="card" onclick="val()">
+    <div id="pic"></div>
+    <p class="name">Sathvika</p>
+    <p class="message">Wishing you a fantastic birthday filled with joy and happiness!</p>
+    <p class="sender">From, AYUSH</p>
+  </div>
+  <script>
+  function val(){
+    var audio = new Audio("https://github.com/AyushV-coder/Birthday/blob/master/birthday-card-73275.mp3?raw=true");
+    audio.play();
+    }
+    alert('NOTICE :- CLICK ON THE CARD TO ON THE AUDIO');
+  </script>
+</body>
+
+</html>
